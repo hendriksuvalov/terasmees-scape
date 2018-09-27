@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:include="head :: head"/>
+<head th:include="head :: head">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
 <body>
-    <h1>Index page!</h1>
-    <h2 th:text="${text}"></h2>
+    <h1>Teras-Scape</h1>
+    <div id="sub-menu">
+        <ul>
+            <li><a href="index.html"><span>Forums</span></a></li>
+            <li> Welcome to the best Runescape server! </li>
+            <li> Download</li>
+        </ul>
+    </div>
 </body>
 </html>
