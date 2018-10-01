@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="761127151350-trb7gupvf898j0jtftgpm3bh8idvh8sn.apps.googleusercontent.com">
 <head th:include="head :: head">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
+    
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul>
@@ -12,8 +15,9 @@
             <li> Download</li>
         </ul>
     </div>
-    <iframe width="420" height="315"
-src="https://www.youtube.com/embed/s5TxIynodew?autoplay=1">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <iframe id="iframe"
+src="https://www.youtube.com/embed/N-16vyMIRk8">
 </iframe>
 </body>
 </html>
