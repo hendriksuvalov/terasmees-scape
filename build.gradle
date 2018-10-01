@@ -26,6 +26,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
+	compileOnly 'org.projectlombok:lombok:1.18.2'
+	compileOnly 'org.hibernate:hibernate-core:5.3.6.Final'
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	testCompile('org.springframework.boot:spring-boot-starter-test')}
