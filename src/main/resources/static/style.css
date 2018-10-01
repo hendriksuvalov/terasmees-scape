@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-    background-color: rgb(35, 48, 68);
+    background-image: url("/img/epicbattle.jpg");
 }
 
 #sub-menu {
@@ -27,4 +27,11 @@ body {
     font-size: 1em;
     z-index: 2;
     position: relative;
+}
+#iframe {
+    width: 45em;
+    height: 30em;
+    position:relative;
+    display: block;
+    
 }
