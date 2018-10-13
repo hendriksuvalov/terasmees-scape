@@ -32,6 +32,12 @@ body {
     width: 45em;
     height: 30em;
     position:relative;
-    display: block;
-    
+    display: block;   
+}
+
+.front-page-link {
+    color: white;
+    background-color: cadetblue;
+    padding: 1em 0;
+    text-decoration: none;
 }
