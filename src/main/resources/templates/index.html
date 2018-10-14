@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <meta name="google-signin-client_id" content="761127151350-ho2lovngn4anh1cij1c3fh42i2bpuo1p.apps.googleusercontent.com">
 <head th:include="head :: head">
     <meta charset="UTF-8">
@@ -9,17 +11,80 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <title>Terasmees-scape - Forums for the best RuneScape server</title>
+    <script>
+    var LanguageList = {
+  "EN" : "English",
+  "EE" : "Eesti",
+};
+
+//languages Objects
+var WORDS_EN = {
+    "text1" : "Welcome to the best Runescape Private Server!",
+    "register" : "Register",
+    "email" : "Email",
+    "password" : "Password",
+    "repeatpassword" : "Repeat Password",
+    "alreadyhave" : "Already have an account?"
+    
+};
+
+var WORDS_EE = {
+    "text1" : "Tere tulemast kõige paremasse Runescape'i privaatserverisse!",
+    "register" : "Registreeru",
+    "email" : "Email",
+    "password" : "Parool",
+    "repeatpassword": "Korda parooli",
+    "alreadyhave" : "Kasutaja juba olemas?"
+    
+};
+
+
+
+window.onload = initialize;
+
+function initialize() {
+
+  var $dropdown = $("#country_select");    
+  $.each(LanguageList, function(key, value) {
+    $dropdown.
+      append($("<option/>").
+      val(key).
+      text(value));
+    });
+    
+  loadsLanguage("EN");
+}
+
+function loadsLanguage(lang){
+  /*fills all the span tags with class=lang pattern*/ 
+  $('span[class^="lang"]').each(function(){
+    var LangVar = (this.className).replace('lang-','');
+    var Text = window["WORDS_"+lang][LangVar];
+    $(this).text(Text);        
+  });
+}
+    </script>
 </head>
 <body>
+    
+
+<select id="country_select" onchange="loadsLanguage(this.value);">
+</select>
+    
     
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul id="front-page-menu">
             <li><a class="front-page-link" href="/templates/forums.html" alt="Forums"><span>Forums</span></a></li>
-            <li class="stupid-text"> Welcome to the best Runescape server! </li>
+            <span class="lang-text1", id="text1"> </span>
             <li><a class="front-page-link" href="/templates/index.html" alt="Download"><span>Download</span></a></li>
         </ul>
     </div>
+    
+    
+    
+    
+    
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <!-- Inspired by https://www.w3schools.com/howto/howto_css_register_form.asp -->
     <form id="registration-form" action="">
@@ -44,7 +109,7 @@
       </div>
     </form>
     <iframe id="iframe"
-    src="https://www.youtube.com/embed/N-16vyMIRk8">
+    src="https://www.youtube.com/embed/pTCp0kJYF30">
     </iframe>
     <script src="/static/index.js"></script>
 </body>
