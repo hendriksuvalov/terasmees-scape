@@ -24,7 +24,9 @@ var WORDS_EN = {
     "email" : "Email",
     "password" : "Password",
     "repeatpassword" : "Repeat Password",
-    "alreadyhave" : "Already have an account?"
+    "alreadyhave" : "Already have an account?",
+    "download" : "Download",
+    "forums" : "Forums"
     
 };
 
@@ -34,7 +36,9 @@ var WORDS_EE = {
     "email" : "Email",
     "password" : "Parool",
     "repeatpassword": "Korda parooli",
-    "alreadyhave" : "Kasutaja juba olemas?"
+    "alreadyhave" : "Kasutaja juba olemas?",
+    "download" : "Lae alla",
+    "forums" : "Foorumid"
     
 };
 
@@ -75,9 +79,9 @@ function loadsLanguage(lang){
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul id="front-page-menu">
-            <li><a class="front-page-link" href="/templates/forums.html" alt="Forums"><span>Forums</span></a></li>
-            <span class="lang-text1", id="text1"> </span>
-            <li><a class="front-page-link" href="/templates/index.html" alt="Download"><span>Download</span></a></li>
+            <li><a class="front-page-link" href="/templates/forums.html" alt="Forums"><span class="lang-forums" id="forums">Forums</span></a></li>
+            <span class="lang-text1", id="text1">Welcome to the best Runescape Private Server! </span>
+            <li><a class="front-page-link" href="/templates/index.html" alt="Download"><span class="lang-download" id="download">Download</span></a></li>
         </ul>
     </div>
 
@@ -85,23 +89,23 @@ function loadsLanguage(lang){
     <form class="forms" action="">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <div class="registration">
-        <h2>Register</h2>
+            <h2><span class="lang-register" id="register">Register</span></h2>
         <hr>
-            <label for="email"><b><span class="lang-email" id="email"></span></b></label>
+            <label for="email"><b><span class="lang-email" id="email">Email</span></b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
 
-        <label for="password"><b><span class="lang-password" id="password"></span></b></label>
+        <label for="password"><b><span class="lang-password" id="password">Password</span></b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
-        <label for="psw-repeat"><b><span class="lang-repeatpassword" id="repeatpassword"></span></b></label>
+        <label for="psw-repeat"><b><span class="lang-repeatpassword" id="repeatpassword">Repeat Password</span></b></label>
         <input type="password" placeholder="Repeat Password" name="password" required>
         <hr>
 
-        <button type="submit" class="registerbtn"><span class="lang-register" id="register"></span></button>
+        <button type="submit" class="registerbtn"><span class="lang-register" id="register">Register</span></button>
       </div>
 
       <div class="signin">
-        <span class="lang-alreadyhave" id="alreadyhave"></span> <a href="/templates/login.html">Sign in</a>.
+        <span class="lang-alreadyhave" id="alreadyhave">Already have an account?</span> <a href="/templates/login.html">Sign in</a>.
       </div>
     </form>
 
