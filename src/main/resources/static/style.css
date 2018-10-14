@@ -45,7 +45,7 @@ body {
     text-decoration: none;
 }
 
-#registration-form {
+.forms {
     float: right;
     width: 20%;
     padding: 0 20em 0 0;
@@ -54,4 +54,15 @@ body {
 input {
     width: 100%;
     display: inline-block;
+}
+
+.g-signin2 {
+    float: right;
+}
+
+#map {
+    height: 20em;
+    width: 30%;
+    position: relative;
+    align-self: center;
 }

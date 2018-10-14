@@ -20,9 +20,9 @@
             <li><a class="front-page-link" href="/templates/index.html" alt="Download"><span>Download</span></a></li>
         </ul>
     </div>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <!-- Inspired by https://www.w3schools.com/howto/howto_css_register_form.asp -->
-    <form id="registration-form" action="">
+    <form class="forms" action="">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <div class="registration">
         <h2>Register</h2>
         <hr>
@@ -40,11 +40,10 @@
       </div>
 
       <div class="signin">
-        <p>Already have an account? <a href="#">Sign in</a>.</p>
+        <p>Already have an account? <a href="/templates/login.html">Sign in</a>.</p>
       </div>
     </form>
-    <iframe id="iframe"
-    src="https://www.youtube.com/embed/N-16vyMIRk8">
+    <iframe id="iframe" src="https://www.youtube.com/embed/N-16vyMIRk8">Welcome video
     </iframe>
     <script src="/static/index.js"></script>
 </body>
