@@ -3,7 +3,10 @@ h1 {
 }
 
 body {
-    background-image: url("/img/epicbattle.jpg");
+    background: #c19e67; /* Old browsers */
+    background: -moz-linear-gradient(left, #c19e67 68%, #e0caac 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #c19e67 68%,#e0caac 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #c19e67 68%,#e0caac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 #sub-menu {
