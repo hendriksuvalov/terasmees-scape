@@ -87,21 +87,21 @@ function loadsLanguage(lang){
         <div class="registration">
         <h2>Register</h2>
         <hr>
-        <label for="email"><b>Email</b></label>
+            <label for="email"><b><span class="lang-email" id="email"></span></b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
 
-        <label for="password"><b>Password</b></label>
+        <label for="password"><b><span class="lang-password" id="password"></span></b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
-        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <label for="psw-repeat"><b><span class="lang-repeatpassword" id="repeatpassword"></span></b></label>
         <input type="password" placeholder="Repeat Password" name="password" required>
         <hr>
 
-        <button type="submit" class="registerbtn">Register</button>
+        <button type="submit" class="registerbtn"><span class="lang-register" id="register"></span></button>
       </div>
 
       <div class="signin">
-        <p>Already have an account? <a href="/templates/login.html">Sign in</a>.</p>
+        <span class="lang-alreadyhave" id="alreadyhave"></span> <a href="/templates/login.html">Sign in</a>.
       </div>
     </form>
 
