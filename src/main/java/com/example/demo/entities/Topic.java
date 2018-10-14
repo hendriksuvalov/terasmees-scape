@@ -23,11 +23,11 @@ public class Topic {
     @NotNull
     private String title;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @Column(name = "created_by")
-    @ManyToOne
+    @JoinColumn(name = "created_by", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private ForumUser createdBy;
 }

@@ -19,17 +19,15 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at", updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @Column(name = "created_by")
-    @NotNull
-    @ManyToOne
+    @JoinColumn(name = "created_by", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private ForumUser createdBy;
 
-    @Column(name = "topic")
-    @NotNull
-    @ManyToOne
+    @JoinColumn(name = "topic", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private Topic topic;
 }

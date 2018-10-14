@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="761127151350-ho2lovngn4anh1cij1c3fh42i2bpuo1p.apps.googleusercontent.com">
 <head th:include="head :: head">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
+    
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul>
-            <li><a href="index.html"><span>Forums</span></a></li>
-            <li> Welcome to the best Runescape server! </li>
-            <li> Download</li>
+            <li><a class="front-page-link" href="/templates/forums.html"><span>Forums</span></a></li>
+            <li class="stupid-text"> Welcome to the best Runescape server! </li>
+            <li><a class="front-page-link" href="/templates/index.html"><span>Download</span></a></li>
         </ul>
     </div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <iframe id="iframe"
+src="https://www.youtube.com/embed/N-16vyMIRk8">
+</iframe>
+    <script src="/static/index.js"></script>
 </body>
 </html>

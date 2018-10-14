@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 
+import com.example.demo.entities.enums.UserRole;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
@@ -31,9 +32,14 @@ public class ForumUser {
     @NotNull
     private String password;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     @NotNull
-    private Email email;
+    private String email;
+
+    @Column(name = "role")
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    private UserRole role;
 
     @Column(name = "created_at")
     @CreationTimestamp

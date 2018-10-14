@@ -17,7 +17,6 @@ import java.util.UUID;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ForumUserOutputDTO extends ResourceSupport {
-
     private UUID uuid;
     private String username;
 }

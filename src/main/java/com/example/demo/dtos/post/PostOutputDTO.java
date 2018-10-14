@@ -18,7 +18,6 @@ import java.util.UUID;
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class PostOutputDTO extends ResourceSupport {
-
     private UUID uuid;
     private TopicOutputDTO topic;
     private String text;

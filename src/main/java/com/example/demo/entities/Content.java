@@ -23,7 +23,8 @@ public class Content {
     @Size(max = 1000, message = "Your content should have less than 1000 characters.")
     private String text;
 
-    @Column(name = "post")
+    @JoinColumn(name = "post", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @NotNull
     private Post post;
 }
