@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-    background-image: url("/img/epicbattle.jpg");
+    background-image: url("/static/img/epicbattle.jpg");
 }
 
 #sub-menu {
