@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-    background-image: url("/static/img/epicbattle.jpg");
+    background-image: linear-gradient(black, white);
 }
 
 #sub-menu {
@@ -25,7 +25,7 @@ body {
     text-transform: uppercase;
     font-size: 1em;
     position: relative;
-    color: #ffffff;
+    color: burlywood;
     padding: 0;
     margin: 0;
     display: inline;
@@ -47,15 +47,14 @@ body {
 #iframe {
     width: 45em;
     height: 30em;
-    position:relative;
+    position: relative;
     display: block;   
 }
 
 .front-page-link {
-    color: white;
-    background-color: cadetblue;
+    color:darkgreen;
+    background-blend-mode: lighten;
     padding: 1em 0;
-    text-decoration: none;
 }
 
 .forms {
