@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <meta name="google-signin-client_id" content="761127151350-ho2lovngn4anh1cij1c3fh42i2bpuo1p.apps.googleusercontent.com">
 <head th:include="head :: head">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Runescape, Terasmees-Scape, Forums, Game, Download">
+    <meta name="description" content="Terasmees-Scape is the best RuneScape server">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Terasmees-scape - Forums for the best RuneScape server</title>
 </head>
 <body>
     
+
+<select id="country_select" onchange="loadsLanguage(this.value);">
+</select>
+    
+    
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
-        <ul>
-            <li><a class="front-page-link" href="/templates/forums.html"><span>Forums</span></a></li>
-            <li class="stupid-text"> Welcome to the best Runescape server! </li>
-            <li><a class="front-page-link" href="/templates/index.html"><span>Download</span></a></li>
+        <ul id="front-page-menu">
+            <li><a class="front-page-link" href="forums.html" alt="Forums"><span class="lang-forums" id="forums">Forums</span></a></li>
+            <span class="lang-text1", id="text1">Welcome to the best Runescape Private Server! </span>
+            <li><a class="front-page-link" href="index.html" alt="Download"><span class="lang-download" id="download">Download</span></a></li>
         </ul>
     </div>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <iframe id="iframe"
-src="https://www.youtube.com/embed/N-16vyMIRk8">
-</iframe>
+
+    <!-- Inspired by https://www.w3schools.com/howto/howto_css_register_form.asp -->
+    <form class="forms" action="">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="registration">
+            <h2><span class="lang-register" id="register">Register</span></h2>
+        <hr>
+            <label for="email"><b><span class="lang-email" id="email">Email</span></b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="password"><b><span class="lang-password" id="password">Password</span></b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label for="psw-repeat"><b><span class="lang-repeatpassword" id="repeatpassword">Repeat Password</span></b></label>
+        <input type="password" placeholder="Repeat Password" name="password" required>
+        <hr>
+
+        <button type="submit" class="registerbtn"><span class="lang-register" id="register">Register</span></button>
+      </div>
+
+      <div class="signin">
+        <span class="lang-alreadyhave" id="alreadyhave">Already have an account?</span> <a href="login.html">Sign in</a>.
+      </div>
+    </form>
+
+    <iframe id="iframe" src="https://www.youtube.com/embed/N-16vyMIRk8">Welcome video
+
+    </iframe>
     <script src="/static/index.js"></script>
 </body>
 </html>
