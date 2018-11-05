@@ -69,10 +69,8 @@ function loadsLanguage(lang){
 }
 
 <script src="https://smtpjs.com/v2/smtp.js"> </script>
-
-
 function sendEmail() {
-    var eMail = document.getElementById("email").value;
+	var eMail = document.getElementById("email").value;
     Email.send("terasmeesscape@gmail.com",
     eMail,
     "A warm welcome from Terasmees-Scape",
@@ -80,5 +78,7 @@ function sendEmail() {
     "smtp.gmail.com",
     "terasmeesscape@gmail.com",
     "hello.1234");
-
 }
+
+
+
