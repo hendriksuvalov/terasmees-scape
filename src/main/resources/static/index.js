@@ -11,6 +11,7 @@ $(document).ready(function () {
 });
 
 
+
 var LanguageList = {
   "EN" : "English",
   "EE" : "Eesti",
@@ -65,4 +66,19 @@ function loadsLanguage(lang){
     var Text = window["WORDS_"+lang][LangVar];
     $(this).text(Text);        
   });
+}
+
+<script src="https://smtpjs.com/v2/smtp.js"> </script>
+
+
+function sendEmail() {
+    var eMail = document.getElementById("email").value;
+    Email.send("terasmeesscape@gmail.com",
+    eMail,
+    "A warm welcome from Terasmees-Scape",
+    "Thanks for joining our private servers forums!",
+    "smtp.gmail.com",
+    "terasmeesscape@gmail.com",
+    "hello.1234");
+
 }
