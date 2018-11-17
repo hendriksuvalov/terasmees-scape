@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/index.js"></script>
 
 <meta name="google-signin-client_id" content="761127151350-ho2lovngn4anh1cij1c3fh42i2bpuo1p.apps.googleusercontent.com">
-<head th:include="head :: head">
+<head>
     <meta charset="UTF-8">
     <meta name="keywords" content="Runescape, Terasmees-Scape, Forums, Game, Download">
     <meta name="description" content="Terasmees-Scape is the best RuneScape server">
@@ -17,44 +18,60 @@
 
 <select id="country_select" onchange="loadsLanguage(this.value);">
 </select>
-
-
+    
+    
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul id="front-page-menu">
-            <li><a class="front-page-link" href="/forums" alt="Forums"><span class="lang-forums" id="forums">Forums</span></a></li>
-            <span class="lang-text1", id="text1">Welcome to the best Runescape Private Server! </span>
-            <li><a class="front-page-link" href="/" alt="Download"><span class="lang-download" id="download">Download</span></a></li>
+            <li><a class="front-page-link" href="/forums"><text class="lang-forums" id="forums">Forums</text></a></li>
+            <text class="lang-text1" id="text1">Welcome to the best Runescape Private Server! </text>
+            <li><a class="front-page-link" href="/"><text class="lang-download" id="download">Download</text></a></li>
         </ul>
     </div>
 
     <!-- Inspired by https://www.w3schools.com/howto/howto_css_register_form.asp -->
-    <form class="forms" action="">
+    <form th:action="@{/auth/register}" method="post">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <div class="registration">
-            <h2><span class="lang-register" id="register">Register</span></h2>
+            <h2><text class="lang-register" id="register">Register</text></h2>
         <hr>
-            <label for="email"><b><span class="lang-email" id="email">Email</span></b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+            <b><text class="lang-email">Email</text></b>
+        <input type="text" id="email" placeholder="Enter Email" name="email" required>
 
-        <label for="password"><b><span class="lang-password" id="password">Password</span></b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <b><text class="lang-password">Password</text></b>
+        <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
-        <label for="psw-repeat"><b><span class="lang-repeatpassword" id="repeatpassword">Repeat Password</span></b></label>
-        <input type="password" placeholder="Repeat Password" name="password" required>
+        <b><text class="lang-repeatpassword">Repeat Password</text></b>
+        <input type="password" id="repeatpassword" placeholder="Repeat Password" name="password" required>
         <hr>
 
-        <button type="submit" class="registerbtn"><span class="lang-register" id="register">Register</span></button>
+        <button>Register</button>
       </div>
 
+
+
+<script src="https://smtpjs.com/v2/smtp.js"> </script>
+<script>
+function sendEmail() {
+	var eMail = document.getElementById("email").value;
+    Email.send("terasmeesscape@gmail.com",
+    eMail,
+    "A warm welcome from Terasmees-Scape",
+    "Thanks for joining our private servers forums!",
+    "smtp.gmail.com",
+    "terasmeesscape@gmail.com",
+    "hello.1234");
+}
+</script>
+
       <div class="signin">
-        <span class="lang-alreadyhave" id="alreadyhave">Already have an account?</span> <a href="/login">Sign in</a>.
+        <text class="lang-alreadyhave" id="alreadyhave">Already have an account?</text> <a href="/login">Sign in</a>.
       </div>
     </form>
 
-    <iframe id="iframe" src="https://www.youtube.com/embed/N-16vyMIRk8">Welcome video
+    <iframe id="iframe" src="https://www.youtube.com/embed/N-16vyMIRk8">
 
     </iframe>
-    <script src="/static/index.js"></script>
+    
 </body>
 </html>

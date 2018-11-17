@@ -23,14 +23,14 @@
     <h1>Teras-Scape</h1>
     <div id="sub-menu">
         <ul id="front-page-menu">
-            <li><a class="front-page-link" href="forums.html"><text class="lang-forums" id="forums">Forums</text></a></li>
+            <li><a class="front-page-link" href="/forums"><text class="lang-forums" id="forums">Forums</text></a></li>
             <text class="lang-text1" id="text1">Welcome to the best Runescape Private Server! </text>
-            <li><a class="front-page-link" href="index.html"><text class="lang-download" id="download">Download</text></a></li>
+            <li><a class="front-page-link" href="/"><text class="lang-download" id="download">Download</text></a></li>
         </ul>
     </div>
 
     <!-- Inspired by https://www.w3schools.com/howto/howto_css_register_form.asp -->
-    <form class="forms">
+    <form th:action="@{/auth/register}" method="post">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <div class="registration">
             <h2><text class="lang-register" id="register">Register</text></h2>
@@ -45,7 +45,7 @@
         <input type="password" id="repeatpassword" placeholder="Repeat Password" name="password" required>
         <hr>
 
-        <button onclick="sendEmail()">Register</button>
+        <button>Register</button>
       </div>
 
 

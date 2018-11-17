@@ -13,4 +13,14 @@ public class WelcomeController {
         model.addAttribute("text", "This is text");
         return "index";
     }
+
+    @RequestMapping("/forums")
+    public String forums(Model model) {
+        return "forums";
+    }
+
+    @RequestMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
 }

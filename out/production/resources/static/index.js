@@ -11,6 +11,7 @@ $(document).ready(function () {
 });
 
 
+
 var LanguageList = {
   "EN" : "English",
   "EE" : "Eesti",
@@ -59,10 +60,16 @@ function initialize() {
 }
 
 function loadsLanguage(lang){
-  /*fills all the span tags with class=lang pattern*/ 
-  $('span[class^="lang"]').each(function(){
+  /*fills all the text tags with class=lang pattern*/ 
+  $('text[class^="lang"]').each(function(){
     var LangVar = (this.className).replace('lang-','');
     var Text = window["WORDS_"+lang][LangVar];
     $(this).text(Text);        
   });
 }
+
+
+
+
+
+
