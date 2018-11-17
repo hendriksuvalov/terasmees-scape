@@ -46,4 +46,5 @@ dependencies {
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.7'
 	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
 	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '9.0.12'
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.0.1'
 }
