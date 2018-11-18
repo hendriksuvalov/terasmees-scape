@@ -3,8 +3,8 @@ package com.example.demo.controllers;
 import com.example.demo.dtos.forumuser.ForumUserInputDTO;
 import com.example.demo.dtos.forumuser.ForumUserOutputDTO;
 import com.example.demo.services.ForumUserService;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

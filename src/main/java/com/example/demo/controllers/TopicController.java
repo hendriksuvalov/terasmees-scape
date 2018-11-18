@@ -5,8 +5,9 @@ import com.example.demo.dtos.topic.TopicInputDTO;
 import com.example.demo.dtos.topic.TopicOutputDTO;
 import com.example.demo.services.PostService;
 import com.example.demo.services.TopicService;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
