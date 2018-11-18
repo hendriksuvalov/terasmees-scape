@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class GoogleserviceApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(GoogleserviceApplication.class, args);
-    }
     @RequestMapping(value = "/user")
     public Principal user(Principal principal) {
         return principal;
