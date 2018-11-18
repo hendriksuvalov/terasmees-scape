@@ -9,9 +9,15 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 import javax.annotation.Resource;
 
+@Configuration
+@EnableOAuth2Sso
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     private UserDetailsService userDetailsService;
@@ -37,7 +43,16 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager(), applicationUserRepository))
-                .addFilter(new JWTAuthorizationFilter(authenticationManager(), applicationUserRepository));
+                .addFilter(new JWTAuthorizationFilter(authenticationManager(), applicationUserRepository))
+                .csrf()
+                .disable()
+                .antMatcher("/**")
+                .authorizeRequests()
+                .antMatchers("/", "/index.html")
+                .permitAll()
+                .anyRequest()
+                .authenticated();
+
     }
 
     @Override

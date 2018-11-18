@@ -14,6 +14,10 @@ import java.security.Principal;
 import java.util.List;
 import java.util.UUID;
 
+
+
+
+
 @RestController
 @RequestMapping("/forumusers")
 @Api(description = "Actions related to forum users")
@@ -45,4 +49,10 @@ public class ForumUserController {
     public List<ForumUserOutputDTO> getAllUsers() {
         return forumUserService.getForumUsers();
     }
+
+
+
 }
+
+
+
