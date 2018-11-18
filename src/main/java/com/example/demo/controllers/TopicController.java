@@ -40,7 +40,7 @@ public class TopicController {
     }
 
     @ApiOperation("Adds new topic, needs topic title and message in body")
-    @PostMapping("/")
+    @PostMapping(value = "/post")
     public void addTopic(@RequestBody TopicInputDTO topicInputDTO, Principal principal) {
         topicService.addTopic(topicInputDTO, principal);
     }

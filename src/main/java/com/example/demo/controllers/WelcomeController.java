@@ -23,4 +23,14 @@ public class WelcomeController {
     public String login(Model model) {
         return "login";
     }
+
+    @RequestMapping("/post")
+    public String post(Model model) {
+        return "post";
+    }
+
+    @RequestMapping("/newtopic")
+    public String topic(Model model) {
+        return "newtopic";
+    }
 }
