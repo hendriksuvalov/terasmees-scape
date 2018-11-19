@@ -33,4 +33,9 @@ public class WelcomeController {
     public String topic(Model model) {
         return "newtopic";
     }
+
+    @RequestMapping("/sitemap")
+    public String sitemap(Model model) {
+        return "sitemap";
+    }
 }

@@ -1,9 +1,9 @@
 h1 {
-    color: white;
+    color: black;
 }
 
 body {
-    background-image: linear-gradient(black, white);
+    background-image: linear-gradient(to top, lightgray, white);
 }
 
 #sub-menu {
@@ -25,7 +25,7 @@ body {
     text-transform: uppercase;
     font-size: 1em;
     position: relative;
-    color: burlywood;
+    color: black;
     padding: 0;
     margin: 0;
     display: inline;
@@ -34,7 +34,7 @@ body {
 
 
 #sub-menu>ul>li {
-    color: #ffffff;
+    color: black;
     padding: 0;
     margin: 0;
     display: inline;
