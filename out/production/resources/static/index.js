@@ -3,20 +3,15 @@ $(document).ready(function () {
         $(this).css("padding", "1.2em 0.2em")
     })
 });
-
 $(document).ready(function () {
     $(".front-page-link").mouseout(function(){
         $(this).css("padding", "1em 0")
     })
 });
-
-
-
 var LanguageList = {
   "EN" : "English",
   "EE" : "Eesti",
 };
-
 //languages Objects
 var WORDS_EN = {
     "text1" : "Welcome to the best Runescape Private Server!",
@@ -29,7 +24,6 @@ var WORDS_EN = {
     "forums" : "Forums"
     
 };
-
 var WORDS_EE = {
     "text1" : "Tere tulemast kõige paremasse Runescape'i privaatserverisse!",
     "register" : "Registreeru",
@@ -41,13 +35,8 @@ var WORDS_EE = {
     "forums" : "Foorumid"
     
 };
-
-
-
 window.onload = initialize;
-
 function initialize() {
-
   var $dropdown = $("#country_select");    
   $.each(LanguageList, function(key, value) {
     $dropdown.
@@ -55,10 +44,8 @@ function initialize() {
       val(key).
       text(value));
     });
-    
   loadsLanguage("EN");
 }
-
 function loadsLanguage(lang){
   /*fills all the text tags with class=lang pattern*/ 
   $('text[class^="lang"]').each(function(){

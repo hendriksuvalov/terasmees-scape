@@ -1,15 +1,12 @@
 h1 {
     color: black;
 }
-
 body {
     background-image: linear-gradient(to top, lightgray, white);
 }
-
 #sub-menu {
     display: table;
 }
-
 #front-page-menu {
     margin: 0 auto;
     padding: 2em;
@@ -18,7 +15,6 @@ body {
     position: relative;
     text-align: center
 }
-
 #text1 {
     font-weight: 700;
     letter-spacing: 0.07em;
@@ -30,9 +26,6 @@ body {
     margin: 0;
     display: inline;
 }
-
-
-
 #sub-menu>ul>li {
     color: black;
     padding: 0;
@@ -50,28 +43,23 @@ body {
     position: relative;
     display: block;
 }
-
 .front-page-link {
     color:darkgreen;
     background-blend-mode: lighten;
     padding: 1em 0;
 }
-
 .forms {
     float: right;
     width: 20%;
     padding: 0 20em 0 0;
 }
-
 input {
     width: 100%;
     display: inline-block;
 }
-
 .g-signin2 {
     float: right;
 }
-
 #map {
     height: 20em;
     width: 30%;
