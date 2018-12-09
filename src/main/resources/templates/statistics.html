@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="head :: head">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Runescape, Terasmees-Scape, Forums, Game">
+    <meta name="description" content="Statistics for Terasmees-Scape">
+    <title>Statistics</title>
+</head>
+<body>
+<h1><a href="/"><span>Teras-Scape</span></a></h1>
+    <h2> Statistika lehe külastajate kohta </h2>
+
+<div id="statistikaEnim">
+    <h2> Enim kasutatud browser </h2>
+    <div th:each="browser : ${attribuut}">
+        <h3 th:text="${browser}"> </h3>
+    </div>
+
+    <h2> Enim kasutatud OS </h2>
+    <div th:each="os : ${osattribuut}">
+        <h3 th:text="${os}"> </h3>
+    </div>
+
+    <h2> Enim külastatud lehekülg </h2>
+    <div th:each="uri : ${uriattribuut}">
+        <h3 th:text="${uri}"> </h3>
+    </div>
+
+</div>
+
+</body>
+</html>
